@@ -1,0 +1,47 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-sans: "DM Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+@layer base {
+  html {
+    font-family: var(--font-sans);
+    color: #1e2433;
+    background-color: #f6f7fb;
+  }
+
+  h1, h2, h3, h4 {
+    font-family: var(--font-display);
+  }
+}
+
+.pastel-canvas {
+  background-color: #f6f7fb;
+  background-image:
+    radial-gradient(at 8% 6%, rgba(219, 224, 255, 0.55) 0px, transparent 42%),
+    radial-gradient(at 92% 10%, rgba(212, 242, 232, 0.5) 0px, transparent 40%),
+    radial-gradient(at 78% 90%, rgba(252, 228, 236, 0.45) 0px, transparent 44%);
+}
+
+.soft-card-shadow {
+  box-shadow:
+    0 1px 3px rgba(30, 36, 51, 0.04),
+    0 10px 30px -6px rgba(79, 70, 229, 0.06);
+}
+
+.soft-task-shadow {
+  box-shadow:
+    0 1px 2px rgba(30, 36, 51, 0.03),
+    0 6px 18px -4px rgba(51, 65, 85, 0.05);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
